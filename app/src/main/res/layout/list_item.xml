@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardName"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/cardPhoto"
             android:text="TextView" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/cardPhoto"
             android:text="Name" />
 
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardName"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/cardPhoto"
             android:text="Species" />
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/labelSpecies"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/cardPhoto"
             android:text="Gender" />
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardSpecies"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/cardPhoto"
             android:text="TextView" />
     </RelativeLayout>

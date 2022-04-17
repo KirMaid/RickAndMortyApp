@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,13 +16,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/mainPagePhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/textName"
+            android:id="@+id/mainPageName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Рик Санчес" />
@@ -33,7 +34,7 @@
             android:text="Cтатус" />
 
         <TextView
-            android:id="@+id/textStatus"
+            android:id="@+id/mainPageStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Жив"
@@ -47,7 +48,7 @@
             android:text="Раса" />
 
         <TextView
-            android:id="@+id/textSpecies"
+            android:id="@+id/mainPageSpecies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Человек" />
@@ -59,7 +60,7 @@
             android:text="Пол" />
 
         <TextView
-            android:id="@+id/textGender"
+            android:id="@+id/mainPageGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Мужской" />
@@ -71,7 +72,7 @@
             android:text="Происхождение" />
 
         <TextView
-            android:id="@+id/textOrigin"
+            android:id="@+id/mainPageOrigin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Земля" />
@@ -83,7 +84,7 @@
             android:text="Последнее местоположение" />
 
         <TextView
-            android:id="@+id/textLocation"
+            android:id="@+id/mainPageLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
@@ -92,10 +93,10 @@
             android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Первое появление" />
+            android:text="Кол-во эпизодов" />
 
         <TextView
-            android:id="@+id/textEpisode"
+            android:id="@+id/mainPageEpisode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
