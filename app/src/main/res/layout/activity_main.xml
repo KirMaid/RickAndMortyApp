@@ -11,12 +11,42 @@
         android:id="@+id/main_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rick and Morty" />
+        android:gravity="center"
+        android:text="Rick and Morty"
+        android:textColor="#FF03DAC5"
+        android:textSize="24sp"
+        app:autoSizeMinTextSize="20sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Назад" />
+
+        <TextView
+            android:id="@+id/pageCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/endButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Вперёд" />
+    </LinearLayout>
 </LinearLayout>

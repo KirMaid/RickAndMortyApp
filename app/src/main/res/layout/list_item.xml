@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#FAF5F5"
+    app:cardBackgroundColor="#f5f5dc"
     app:cardCornerRadius="20dp"
     tools:layout_editor_absoluteX="5dp"
     tools:layout_editor_absoluteY="5dp">
@@ -21,7 +21,7 @@
             android:layout_below="@+id/cardName"
             android:layout_marginStart="100dp"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/prof_pic"
+            android:layout_toEndOf="@+id/cardPhoto"
             android:text="TextView" />
 
         <TextView
@@ -29,37 +29,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/prof_pic"
+            android:layout_toEndOf="@+id/cardPhoto"
             android:text="Name" />
 
         <ImageView
-            android:id="@+id/prof_pic"
+            android:id="@+id/cardPhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/race_label"
+            android:id="@+id/labelSpecies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardName"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/prof_pic"
-            android:text="Race" />
+            android:layout_toEndOf="@+id/cardPhoto"
+            android:text="Species" />
 
         <TextView
-            android:id="@+id/gender_label"
+            android:id="@+id/labelGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/race_label"
+            android:layout_below="@id/labelSpecies"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/prof_pic"
+            android:layout_toEndOf="@+id/cardPhoto"
             android:text="Gender" />
 
         <TextView
@@ -69,7 +71,7 @@
             android:layout_below="@+id/cardSpecies"
             android:layout_marginStart="100dp"
             android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/prof_pic"
+            android:layout_toEndOf="@+id/cardPhoto"
             android:text="TextView" />
     </RelativeLayout>
 
