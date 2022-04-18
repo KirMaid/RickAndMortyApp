@@ -14,12 +14,6 @@ import com.squareup.picasso.Picasso
 
 class ListAdapter(private val dataSet: ArrayList<GetCharacterByIdResponse>,context:Context):RecyclerView.Adapter<ListAdapter.ViewHolder>(){
     private val mContext: Context = context
-//    private val myDataSet: ArrayList<GetCharacterByIdResponse> = dataSet
-
-//    fun addItem(item: GetCharacterByIdResponse) {
-//        myDataSet.add(item)
-//}
-//    private val onClickListener: OnItemClickListener? = null
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val cardName: TextView = view.findViewById(R.id.cardName)
@@ -34,14 +28,6 @@ class ListAdapter(private val dataSet: ArrayList<GetCharacterByIdResponse>,conte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-//        holder.cardSpecies.text = myDataSet[position].species
-//        holder.cardName.text = myDataSet[position].name
-//        holder.cardGender.text = myDataSet[position].gender
-//        Picasso.get().load(myDataSet[position].image).into(holder.cardPhoto)
-//        holder.cardSpecies.text = myDataSet[position].species
-
-
         holder.cardSpecies.text = dataSet[position].species
         holder.cardName.text = dataSet[position].name
         holder.cardGender.text = dataSet[position].gender
@@ -51,14 +37,12 @@ class ListAdapter(private val dataSet: ArrayList<GetCharacterByIdResponse>,conte
             val extras = Bundle()
             val intent = Intent(holder.itemView.context, MainActivity2::class.java)
             extras.putInt("index", dataSet[position].id)
-//            extras.putInt("index", myDataSet[position].id)
-            intent.putExtras(extras);
-            holder.itemView.context.startActivity(intent);
+            intent.putExtras(extras)
+            holder.itemView.context.startActivity(intent)
         }
     }
 
     override fun getItemCount(): Int {
-//        return  myDataSet.size
         return  dataSet.size
     }
 }

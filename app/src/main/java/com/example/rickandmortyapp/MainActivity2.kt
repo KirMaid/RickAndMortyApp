@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.squareup.picasso.Picasso
 
 class MainActivity2 : AppCompatActivity() {
-    private val viewModel: MyViewModel by lazy { ViewModelProvider(this).get(MyViewModel::class.java) }
+    private val viewModel: MyViewModel by lazy { ViewModelProvider(this)[MyViewModel::class.java] }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character_information)
@@ -25,10 +25,11 @@ class MainActivity2 : AppCompatActivity() {
 
 
         val bundle = intent.extras
-        val characterId = bundle?.getInt("index");
+        val characterId = bundle?.getInt("index")
         if (characterId != null) {
             viewModel.updateCharacter(characterId)
         }
+
         viewModel.characterByIdLiveData.observe(this) { response ->
             if (response == null) {
                 Toast.makeText(this, "Ooops, date not found", Toast.LENGTH_LONG).show()

@@ -9,6 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,87 +22,159 @@
         <ImageView
             android:id="@+id/mainPagePhoto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/mainPageName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Рик Санчес" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Рик Санчес"
+            android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView10"
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cтатус" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/mainPageStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Жив"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Раса" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
 
-        <TextView
-            android:id="@+id/mainPageSpecies"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Человек" />
+                    android:text="Cтатус" />
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Пол" />
+                <TextView
+                    android:id="@+id/mainPageStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Жив"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </TableRow>
 
-        <TextView
-            android:id="@+id/mainPageGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Мужской" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Происхождение" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Раса" />
 
-        <TextView
-            android:id="@+id/mainPageOrigin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Земля" />
+                <TextView
+                    android:id="@+id/mainPageSpecies"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Человек" />
+            </TableRow>
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Последнее местоположение" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/mainPageLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Пол" />
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Кол-во эпизодов" />
+                <TextView
+                    android:id="@+id/mainPageGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Мужской" />
+            </TableRow>
 
-        <TextView
-            android:id="@+id/mainPageEpisode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Происхождение" />
+
+                <TextView
+                    android:id="@+id/mainPageOrigin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Земля" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Последнее местоположение" />
+
+                <TextView
+                    android:id="@+id/mainPageLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="Кол-во эпизодов" />
+
+                <TextView
+                    android:id="@+id/mainPageEpisode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="TextView" />
+            </TableRow>
+
+        </TableLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

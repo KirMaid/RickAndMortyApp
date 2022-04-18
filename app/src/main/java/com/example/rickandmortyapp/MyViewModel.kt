@@ -10,11 +10,8 @@ import kotlin.collections.listOf as listOf
 
 class MyViewModel:ViewModel() {
     private val repository = CharacterRepository()
-
-    private val _numberOfPage = MutableLiveData<Int>()
-    private val numberOfPage = _numberOfPage
-    private val _allCharactersLiveData = MutableLiveData<ArrayList<GetCharacterByIdResponse>>()
-    val allCharactersLiveData:LiveData<ArrayList<GetCharacterByIdResponse>> =  _allCharactersLiveData
+    private val _allCharactersLiveData = MutableLiveData<List<GetCharacterByIdResponse>>()
+    val allCharactersLiveData:LiveData<List<GetCharacterByIdResponse>> =  _allCharactersLiveData
     private val _characterByIdLiveData = MutableLiveData<GetCharacterByIdResponse>()
     val characterByIdLiveData:LiveData<GetCharacterByIdResponse> = _characterByIdLiveData
 
@@ -25,28 +22,10 @@ class MyViewModel:ViewModel() {
         }
     }
 
-
-     fun updatePage(numberPage:Int){
+    fun getCharacterPage(pageId:Int){
         viewModelScope.launch {
-        val arr:ArrayList<GetCharacterByIdResponse> = arrayListOf()
-        for (i in (numberPage+5*(numberPage-1))..(numberPage+5+5*(numberPage-1))){
-            arr.add(repository.getCharacterById(i)!!)
-        }
-        _allCharactersLiveData.postValue(arr)
+            val response = repository.getCharactersById(pageId)
+            _allCharactersLiveData.postValue(response)
         }
     }
-
-//    fun getCharacterPage(pageId:Int){
-//        viewModelScope.launch {
-//            val response = repository.getCharacterPage(pageId)
-//            _allCharactersLiveData.postValue(response)
-//        }
-//    }
-//
-//    fun getCharacterPageTest(pageId:Int){
-//        viewModelScope.launch {
-//            val response = repository.getCharacterPage(pageId)
-//            _allCharactersLiveData.postValue(response)
-//        }
-//    }
 }

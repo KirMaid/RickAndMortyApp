@@ -10,6 +10,6 @@ interface RetrofitService {
     @GET("character/{idCharacter}")
     suspend fun getCharacterById(@Path("idCharacter")idCharacter:Int): Response<GetCharacterByIdResponse>
 
-//    @GET("character/")
-//    suspend fun getCharacterPage(@Query("page")idPage:Int): Response<ArrayList<GetCharacterByIdResponse>>
+    @GET("character/{idCharacters}")
+    suspend fun getCharactersById(@Path("idCharacters")idCharacters:String): Response<List<GetCharacterByIdResponse>>
 }

@@ -8,11 +8,12 @@ class CharacterRepository {
         }
         return null
     }
-//    suspend fun getCharacterPage(pageId:Int): ArrayList<GetCharacterByIdResponse>? {
-//        val request = RetrofitClient.apiClient.getCharacterPage(pageId)
-//        if(request.isSuccessful){
-//            return request.body()!!
-//        }
-//        return null
-//    }
+
+    suspend fun getCharactersById(characterId:Int): List<GetCharacterByIdResponse>? {
+        val request = RetrofitClient.apiClient.getCharactersById(characterId)
+        if(request.isSuccessful){
+            return request.body()
+        }
+        return null
+    }
 }
